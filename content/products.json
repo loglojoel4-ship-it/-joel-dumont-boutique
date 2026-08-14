@@ -1,0 +1,13 @@
+{
+  "products": [
+    {"id":1, "name":"Flyer Événement", "cat":"Flyer", "layers":14, "size":"2480×3508px", "price":3500},
+    {"id":2, "name":"Pack Story Instagram", "cat":"Réseaux sociaux", "layers":9, "size":"1080×1920px", "price":2500},
+    {"id":3, "name":"Mockup Packaging Cosmétique", "cat":"Mockup", "layers":22, "size":"3000×3000px", "price":6000},
+    {"id":4, "name":"CV Créatif Moderne", "cat":"CV", "layers":11, "size":"2100×2970px", "price":2000},
+    {"id":5, "name":"Carte de Visite Duo", "cat":"Identité visuelle", "layers":8, "size":"1050×600px", "price":1500},
+    {"id":6, "name":"Menu Restaurant Tri-volet", "cat":"Print", "layers":17, "size":"2550×3300px", "price":4000},
+    {"id":7, "name":"Bannière Web Boutique", "cat":"Web", "layers":12, "size":"1920×1080px", "price":2800},
+    {"id":8, "name":"Mockup Livre & Ombre", "cat":"Mockup", "layers":19, "size":"4000×3000px", "price":5500},
+    {"id":9, "name":"Affiche Concert Néon", "cat":"Affiche", "layers":16, "size":"2480×3508px", "price":3800}
+  ]
+}
