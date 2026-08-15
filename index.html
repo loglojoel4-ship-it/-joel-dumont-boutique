@@ -605,9 +605,12 @@ function renderGrid(){
   ];
   grid.innerHTML = products.map((p,i)=>`
     <div class="card">
-      <div class="thumb" style="background:${bgSets[i%bgSets.length]}">
+      <div class="thumb" style="${p.image ? '' : 'background:'+bgSets[i%bgSets.length]}">
+        ${p.image
+          ? `<img src="${p.image}" alt="${p.name}" style="width:100%;height:100%;object-fit:cover;">`
+          : `<div class="mini-layers"><i></i><i></i><i></i></div>`
+        }
         <span class="badge-fmt">PSD</span>
-        <div class="mini-layers"><i></i><i></i><i></i></div>
         <span class="badge-layers">${p.layers} calques</span>
       </div>
       <div class="card-body">
