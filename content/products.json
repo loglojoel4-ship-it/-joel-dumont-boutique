@@ -15,11 +15,15 @@
     },
     {
       "id": 2,
-      "name": "Pack Story Instagram",
-      "cat": "Réseaux sociaux",
-      "layers": 9,
-      "size": "1080×1920px",
-      "price": 2500
+      "name": "Mockup Packaging",
+      "cat": "Mockup",
+      "layers": 23,
+      "size": "4000×3000px",
+      "price": 2500,
+      "images": [
+        "/images/free_pouch.jpg",
+        "/images/p2.2.jpg"
+      ]
     },
     {
       "id": 3,
