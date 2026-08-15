@@ -24,3 +24,4 @@ collections:
               - {label: "Nombre de calques", name: "layers", widget: "number", value_type: "int"}
               - {label: "Dimensions", name: "size", widget: "string", hint: "ex : 2480×3508px"}
               - {label: "Prix (FCFA)", name: "price", widget: "number", value_type: "int"}
+              - {label: "Photo (aperçu)", name: "image", widget: "image", required: false, hint: "Optionnel — sans photo, une vignette générée automatiquement s'affiche"}
