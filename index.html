@@ -556,7 +556,7 @@
 <div class="toast" id="toast"></div>
 
 <script>
-const products = [
+let products = [
   {id:1, name:"Flyer Événement", cat:"Flyer", layers:14, size:"2480×3508px", price:3500},
   {id:2, name:"Pack Story Instagram", cat:"Réseaux sociaux", layers:9, size:"1080×1920px", price:2500},
   {id:3, name:"Mockup Packaging Cosmétique", cat:"Mockup", layers:22, size:"3000×3000px", price:6000},
@@ -567,6 +567,22 @@ const products = [
   {id:8, name:"Mockup Livre & Ombre", cat:"Mockup", layers:19, size:"4000×3000px", price:5500},
   {id:9, name:"Affiche Concert Néon", cat:"Affiche", layers:16, size:"2480×3508px", price:3800},
 ];
+
+// Charge la liste à jour depuis content/products.json (modifiable via /admin)
+async function loadProducts(){
+  try{
+    const res = await fetch('content/products.json', {cache:"no-store"});
+    if(res.ok){
+      const data = await res.json();
+      if(Array.isArray(data.products) && data.products.length){
+        products = data.products;
+      }
+    }
+  } catch(e){
+    console.log("Utilisation du catalogue par défaut", e);
+  }
+  renderGrid();
+}
 
 const providers = [
   {id:"flooz", name:"Flooz", color:"#ff5a1f"},
@@ -748,6 +764,7 @@ function showToast(msg){
 
 renderGrid();
 renderCart();
+loadProducts();
 
 /* ---------- Formulaire impression sur mesure ---------- */
 const fileDrop = document.getElementById('fileDrop');
@@ -793,6 +810,18 @@ document.getElementById('orderForm').addEventListener('submit', function(e){
   window.open(waUrl, '_blank');
   showToast("Ouverture de WhatsApp — n'oubliez pas de joindre le fichier");
 });
+</script>
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
 </script>
 </body>
 </html>
