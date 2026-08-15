@@ -7,7 +7,10 @@
       "layers": 20,
       "size": "2480×1748px",
       "price": 600,
-      "image": "/images/aff-agrosam-cluster-100726.jpg"
+      "image": "/images/aff-agrosam-cluster-100726.jpg",
+      "images": [
+        "/images/aff-agrosam-cluster-100726.jpg"
+      ]
     },
     {
       "id": 2,
