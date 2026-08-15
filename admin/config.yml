@@ -24,4 +24,10 @@ collections:
               - {label: "Nombre de calques", name: "layers", widget: "number", value_type: "int"}
               - {label: "Dimensions", name: "size", widget: "string", hint: "ex : 2480×3508px"}
               - {label: "Prix (FCFA)", name: "price", widget: "number", value_type: "int"}
-              - {label: "Photo (aperçu)", name: "image", widget: "image", required: false, hint: "Optionnel — sans photo, une vignette générée automatiquement s'affiche"}
+              - label: "Photos (jusqu'à 3)"
+                name: "images"
+                widget: "list"
+                required: false
+                max: 3
+                hint: "Ajoutez jusqu'à 3 photos pour montrer le design sous différents angles. Sans photo, une vignette générée automatiquement s'affiche."
+                field: {label: "Photo", name: "src", widget: "image"}
