@@ -1,0 +1,26 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images"
+public_folder: "/images"
+
+collections:
+  - name: "products"
+    label: "Catalogue"
+    files:
+      - name: "products"
+        label: "Liste des produits"
+        file: "content/products.json"
+        fields:
+          - label: "Produits"
+            name: "products"
+            widget: "list"
+            summary: "{{fields.name}} — {{fields.price}} FCFA"
+            fields:
+              - {label: "Identifiant", name: "id", widget: "number", value_type: "int"}
+              - {label: "Nom du fichier", name: "name", widget: "string"}
+              - {label: "Catégorie", name: "cat", widget: "string"}
+              - {label: "Nombre de calques", name: "layers", widget: "number", value_type: "int"}
+              - {label: "Dimensions", name: "size", widget: "string", hint: "ex : 2480×3508px"}
+              - {label: "Prix (FCFA)", name: "price", widget: "number", value_type: "int"}
